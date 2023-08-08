@@ -7,7 +7,7 @@ $old_image = $_POST['old_image'];
 $new_image = $_POST['new_image'];
 $new_base64code = $_POST['new_base64code'];
 
-$sql = "UPDATE user SET image = '$new_image' WHERE id = '$id'";
+$sql = "UPDATE users SET image = '$new_image' WHERE id = '$id'";
 $result = $connect->query($sql);
 
 if ($result) {

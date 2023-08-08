@@ -9,7 +9,7 @@ $result_topic = $connect->query($sql_topic);
 $sql_follower = "SELECT id FROM follows WHERE to_id_user = '$id_user'";
 $result_follower = $connect->query($sql_follower);
 
-$sql_following = "SELECT id from follows WHERE from_id_user = '$id_user'";
+$sql_following = "SELECT id FROM follows WHERE from_id_user = '$id_user'";
 $result_following = $connect->query($sql_following);
 
 echo json_encode(array(

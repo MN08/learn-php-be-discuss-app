@@ -4,9 +4,9 @@ include '../connection.php';
 $username = $_POST['username'];
 $password = md5($_POST['password']);
 
-$sql_check_username = "SELECT * FROM users where username = $username";
+$sql_check_username = "SELECT * FROM users WHERE username = '$username'";
 $result_check_username = $connect->query($sql_check_username);
-if ($result_check_username->num_rows > 0) {
+if (!empty($result_check_username) && $result_check_username->num_rows > 0) {
     echo json_encode(array(
         'success' => false,
         'message' => 'username',

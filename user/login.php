@@ -4,7 +4,7 @@ include '../connection.php';
 $username = $_POST['username'];
 $password = md5($_POST['password']);
 
-$sql = "SELECT * FROM users where username ='$username' AND password = '$password'";
+$sql = "SELECT * FROM users WHERE username ='$username' AND password = '$password'";
 $result = $connect->query($sql);
 
 if ($result->num_rows > 0) {

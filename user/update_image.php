@@ -15,7 +15,13 @@ if ($result) {
         unlink("../images/user/" . $old_image);
     }
     file_put_contents("../images/user/" . $new_image, base64_decode($new_base64code));
-    echo json_encode(array('success' => true));
+    echo json_encode(
+        array(
+            'success' => true
+        )
+    );
 } else {
-    echo json_encode(array('success' => false));
+    echo json_encode(
+        array('success' => false)
+    );
 }

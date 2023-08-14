@@ -9,7 +9,7 @@ $base64code = $_POST['base64code'];
 $from_id_user = $_POST['from_id_user'];
 $to_id_user = $_POST['to_id_user'];
 
-$sql = "INSERT INTO comment SET 
+$sql = "INSERT INTO comments SET 
 id_topic='$id_topic',
 comment ='$comment',
 image='$image', 

@@ -10,7 +10,7 @@ if ($result->num_rows > 0) {
     $data = array();
     while ($get_row = $result->fetch_assoc()) {
         $id_user = $get_row['id_user'];
-        $sql_user = "SELECT * FROM users WHERE id_user = '$id_user'";
+        $sql_user = "SELECT * FROM users WHERE id = '$id_user'";
         $result_user = $connect->query($sql_user);
 
         $user = array();

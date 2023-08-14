@@ -1,9 +1,9 @@
 <?php
 include '../connection.php';
 $id = $_POST['id'];
-$image = $_POST['images'];
+$image = $_POST['image'];
 
-$sql = "DELETE * FROM comments WHERE id ='$id'";
+$sql = "DELETE FROM comments WHERE id ='$id'";
 $result = $connect->query($sql);
 
 if ($result) {

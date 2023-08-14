@@ -1,9 +1,9 @@
 <?php
 include '../connection.php';
 
-$search_query = $_POST['searh_query'];
+$search_query = $_POST['search_query'];
 
-$sql = "SELECT * FROM users WHERE username LIKE %$search_query% ";
+$sql = "SELECT * FROM users WHERE username LIKE '%$search_query%' ";
 $result = $connect->query($sql);
 
 if ($result->num_rows > 0) {
